@@ -15,10 +15,10 @@ const Cart = () => {
     content = <p>Something went wrong!</p>
   }
 
-  if (!loading && !error && cart.length === 0) {
-    content = <p>Nothing to show, product list is empty</p>
+  if (!loading && !error && cart?.length === 0) {
+    content = <p>Nothing to show, cart is empty</p>
   }
-  if (!loading && !error && cart.length) {
+  if (!loading && !error && cart?.length) {
     content = cart.map((product) => <ProductCard key={product._id} product={product} />)
   }
 
